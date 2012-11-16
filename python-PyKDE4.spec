@@ -3,18 +3,19 @@
 %define		_state		stable
 %define		orgname		pykde4
 %define		qtver		4.8.0
-%define		sipver		2:4.13
+%define		sipver		2:4.14
 %define		pyqtver		4.9
 
 Summary:	PyKDE4 - Python bindings for KDE 4
 Summary(pl.UTF-8):	PyKDE4 - dowiązania KDE 4 dla Pythona
 Name:		python-PyKDE4
 Version:	4.9.2
-Release:	1
+Release:	2
 License:	GPL
 Group:		Libraries/Python
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}.tar.xz
 # Source0-md5:	176fe3a693b4722a3bf7e22f1365ab59
+Patch0:		%{name}-typedefs.patch
 BuildRequires:	cmake >= 2.8.0
 BuildRequires:	kde4-kdebase-workspace-devel >= %{version}
 BuildRequires:	python-PyQt4-devel >= %{pyqtver}
@@ -79,6 +80,7 @@ Przykłady dla PyKDE4.
 
 %prep
 %setup -q -n %{orgname}-%{version}
+%patch0 -p1
 
 %build
 install -d build
