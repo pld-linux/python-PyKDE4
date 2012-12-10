@@ -15,7 +15,6 @@ License:	GPL
 Group:		Libraries/Python
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}.tar.xz
 # Source0-md5:	f099684d5dc39ad04d237766b166468e
-Patch0:		%{name}-typedefs.patch
 BuildRequires:	cmake >= 2.8.0
 BuildRequires:	kde4-kdebase-workspace-devel >= %{version}
 BuildRequires:	python-PyQt4-devel >= %{pyqtver}
@@ -80,7 +79,6 @@ Przykłady dla PyKDE4.
 
 %prep
 %setup -q -n %{orgname}-%{version}
-#%patch0 -p1
 
 %build
 install -d build
