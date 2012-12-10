@@ -80,7 +80,7 @@ Przykłady dla PyKDE4.
 
 %prep
 %setup -q -n %{orgname}-%{version}
-%patch0 -p1
+#%patch0 -p1
 
 %build
 install -d build
