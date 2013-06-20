@@ -10,7 +10,7 @@ Summary:	PyKDE4 - Python bindings for KDE 4
 Summary(pl.UTF-8):	PyKDE4 - dowiązania KDE 4 dla Pythona
 Name:		python-PyKDE4
 Version:	4.10.4
-Release:	1
+Release:	2
 License:	GPL
 Group:		Libraries/Python
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}.tar.xz
@@ -153,7 +153,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel-tools
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/pykdeuic4
+%attr(755,root,root) %{_bindir}/pykdeuic4*
 %{py_sitedir}/PyQt4/uic/pykdeuic4.py*
 %{py_sitedir}/PyQt4/uic/widget-plugins/kde4.py*
 
