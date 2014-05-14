@@ -10,12 +10,12 @@
 Summary:	PyKDE4 - Python bindings for KDE 4
 Summary(pl.UTF-8):	PyKDE4 - dowiązania KDE 4 dla Pythona
 Name:		python-PyKDE4
-Version:	4.13.0
+Version:	4.13.1
 Release:	1
 License:	GPL
 Group:		Libraries/Python
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}.tar.xz
-# Source0-md5:	0f1c7a9871d77e6fad8a71e9649ff2e1
+# Source0-md5:	07e2a0b447d36bd18a4b448235d51830
 BuildRequires:	cmake >= 2.8.0
 BuildRequires:	kde4-kdebase-workspace-devel >= %{kdeworkspacever}
 BuildRequires:	kde4-kdepimlibs-devel
