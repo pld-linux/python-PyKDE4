@@ -14,8 +14,8 @@ Version:	4.14.0
 Release:	1
 License:	GPL
 Group:		Libraries/Python
-Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}.tar.xz
-# Source0-md5:	905804b9f32f2ec35f52eff1b42f0393
+Source0:	http://download.kde.org/%{_state}/%{version}/src/%{orgname}-%{version}.tar.xz
+# Source0-md5:	c37f506a7b30846c4f37240cf471284c
 BuildRequires:	cmake >= 2.8.0
 BuildRequires:	kde4-kdebase-workspace-devel >= %{kdeworkspacever}
 BuildRequires:	kde4-kdepimlibs-devel
