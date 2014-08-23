@@ -153,6 +153,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/sip/PyKDE4/solid
 %{_datadir}/sip/PyKDE4/soprano
 %{_datadir}/sip/PyKDE4/glossary.html
+%{_datadir}/sip/PyKDE4/pykde_config.sip
 
 %files devel-tools
 %defattr(644,root,root,755)
