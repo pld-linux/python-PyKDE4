@@ -11,7 +11,7 @@ Summary:	PyKDE4 - Python bindings for KDE 4
 Summary(pl.UTF-8):	PyKDE4 - dowiązania KDE 4 dla Pythona
 Name:		python-PyKDE4
 Version:	4.14.3
-Release:	1
+Release:	2
 License:	GPL
 Group:		Libraries/Python
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}.tar.xz
@@ -20,7 +20,7 @@ BuildRequires:	cmake >= 2.8.0
 BuildRequires:	kde4-kdebase-workspace-devel >= %{kdeworkspacever}
 BuildRequires:	kde4-kdepimlibs-devel
 BuildRequires:	polkit-qt-1-devel
-BuildRequires:	python-PyQt4-devel >= %{pyqtver}
+BuildRequires:	sip-PyQt4 >= %{pyqtver}
 BuildRequires:	python-sip >= %{sipver}
 BuildRequires:	qt4-build >= %{qtver}
 BuildRequires:	qt4-qmake >= %{qtver}
@@ -45,8 +45,8 @@ Summary:	SIP development files for PyKDE4
 Summary(pl.UTF-8):	Pliki programistyczne SIP dla PyKDE4
 Group:		Development/Languages/Python
 Requires:	python-PyKDE4 = %{version}-%{release}
-Requires:	python-PyQt4-devel >= %{pyqtver}
 Requires:	python-sip-devel >= %{sipver}
+Requires:	sip-PyQt4 >= %{pyqtver}
 
 %description devel
 SIP development files for PyKDE4, needed to build other bindings for
