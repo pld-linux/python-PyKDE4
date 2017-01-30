@@ -11,15 +11,18 @@ Summary:	PyKDE4 - Python bindings for KDE 4
 Summary(pl.UTF-8):	PyKDE4 - dowiązania KDE 4 dla Pythona
 Name:		python-PyKDE4
 Version:	4.14.3
-Release:	6
+Release:	7
 License:	GPL
 Group:		Libraries/Python
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}.tar.xz
 # Source0-md5:	945a7492f1ab8cc874e0822f62484b12
-Patch0:		pykde4-4.14.3-missing_symbols.patch
+# upstream patches
+Patch1:		0001-use-LIB_PYTHON-realpath.patch
+Patch2:		0002-Add-some-missing-link-libraries.patch
+Patch3:		0003-Fix-build-with-sip-4.19.patch
+BuildConflicts:	kde4-kdepimlibs-devel
 BuildRequires:	cmake >= 2.8.0
 BuildRequires:	kde4-kdebase-workspace-devel >= %{kdeworkspacever}
-BuildRequires:	kde4-kdepimlibs-devel
 BuildRequires:	polkit-qt-1-devel
 BuildRequires:	sip-PyQt4 >= %{pyqtver}
 BuildRequires:	python-PyQt4 >= %{pyqtver}
@@ -84,7 +87,9 @@ Przykłady dla PyKDE4.
 
 %prep
 %setup -q -n %{orgname}-%{version}
-%patch0 -p1
+%patch1 -p1
+%patch2 -p1
+%patch3 -p1
 
 %build
 install -d build
@@ -116,7 +121,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/kde4/kpythonpluginfactory.so
 %dir %{py_sitedir}/PyKDE4
-%attr(755,root,root) %{py_sitedir}/PyKDE4/akonadi.so
+#%%attr(755,root,root) %{py_sitedir}/PyKDE4/akonadi.so
 %attr(755,root,root) %{py_sitedir}/PyKDE4/dnssd.so
 %attr(755,root,root) %{py_sitedir}/PyKDE4/kdecore.so
 %attr(755,root,root) %{py_sitedir}/PyKDE4/kdeui.so
@@ -138,7 +143,7 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %dir %{_datadir}/sip/PyKDE4
-%{_datadir}/sip/PyKDE4/akonadi
+#%%{_datadir}/sip/PyKDE4/akonadi
 %{_datadir}/sip/PyKDE4/dnssd
 %{_datadir}/sip/PyKDE4/kdecore
 %{_datadir}/sip/PyKDE4/kdeui
