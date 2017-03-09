@@ -21,6 +21,7 @@ Patch1:		0001-use-LIB_PYTHON-realpath.patch
 Patch2:		0002-Add-some-missing-link-libraries.patch
 Patch3:		0003-Fix-build-with-sip-4.19.patch
 BuildConflicts:	kde4-kdepimlibs-devel
+BuildConflicts:	libdom-devel
 BuildRequires:	cmake >= 2.8.0
 BuildRequires:	kde4-kdebase-workspace-devel >= %{kdeworkspacever}
 BuildRequires:	polkit-qt-1-devel
