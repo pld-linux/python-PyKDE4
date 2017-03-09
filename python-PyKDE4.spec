@@ -5,7 +5,6 @@
 %define		qtver		4.8.0
 %define		sipver		2:4.14
 %define		pyqtver		4.9
-%define		kdeworkspacever	4.11.0
 
 Summary:	PyKDE4 - Python bindings for KDE 4
 Summary(pl.UTF-8):	PyKDE4 - dowiązania KDE 4 dla Pythona
@@ -23,7 +22,8 @@ Patch3:		0003-Fix-build-with-sip-4.19.patch
 BuildConflicts:	kde4-kdepimlibs-devel
 BuildConflicts:	libdom-devel
 BuildRequires:	cmake >= 2.8.0
-BuildRequires:	kde4-kdebase-workspace-devel >= %{kdeworkspacever}
+BuildRequires:	kde4-kdelibs-devel >= 4.13.0
+BuildRequires:	kde4-kdebase-workspace-devel >= 4.11.0
 BuildRequires:	polkit-qt-1-devel
 BuildRequires:	sip-PyQt4 >= %{pyqtver}
 BuildRequires:	python-PyQt4 >= %{pyqtver}
