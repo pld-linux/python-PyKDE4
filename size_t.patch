@@ -1,0 +1,11 @@
+--- pykde4-4.14.3/sip/kdecore/typedefs.sip~	2019-10-05 22:38:28.000000000 +0200
++++ pykde4-4.14.3/sip/kdecore/typedefs.sip	2019-10-05 22:40:34.553534986 +0200
+@@ -23,7 +23,7 @@
+ 
+ typedef long time_t;
+ 
+-typedef ulong size_t;
++//typedef ulong size_t;
+ 
+ typedef int ssize_t;
+ 
